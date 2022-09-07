@@ -14,14 +14,14 @@ import java.sql.Connection;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
+
 
 public class Util {
     private static final String URL = "jdbc:mysql://localhost:3306/pp101";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "Bdfyxbr9";
-    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static SessionFactory factory;
+
+
 
     public static Connection getConnection (){
         try {
@@ -35,32 +35,6 @@ public class Util {
         }
 
     }
-//    public static SessionFactory getSessionFactory() {
-//        if (factory == null) {
-//            try {
-//                SessionFactory factory = new Configuration()
-//
-//                        .setProperty("hibernate.connection.driver_class", DRIVER)
-//                        .setProperty("hibernate.connection.url", URL)
-//                        .setProperty("hibernate.connection.username", USERNAME)
-//                        .setProperty("hibernate.connection.password", PASSWORD)
-//                        //.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect")
-//                        .setProperty("hibernate.current_session_context_class", "thread")
-//                        // .setProperty("hibernate.hbm2ddl.auto", "")
-//
-//                       // .setProperty("hibernate.hbm2ddl.auto", "none")
-//
-//                        .addAnnotatedClass(User.class)
-//                        .buildSessionFactory();
-//                System.out.println("connection ok");
-//                return factory;
-//            } catch (HibernateException var3) {
-//                System.out.println("-------------------------------");
-//                var3.printStackTrace();
-//            }
-//
-//        } return factory;
-//    }
 
     private static SessionFactory sessionFactory;
     public static SessionFactory getSessionFactory(){
